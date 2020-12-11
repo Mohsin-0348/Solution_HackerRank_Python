@@ -1,0 +1,13 @@
+def merge_the_tools(string, k):
+    if k <= len(string):
+        for i in range(0, len(string), k):
+            sub_str = string[i:(i+k)]
+            no_dupli = ''
+            for x in sub_str:
+                if x not in no_dupli:
+                    no_dupli += x
+            print(no_dupli)
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
