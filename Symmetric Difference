@@ -1,0 +1,6 @@
+m = int(input())
+a = set(list(map(int, input().split(' '))))
+n = int(input())
+b = set(list(map(int, input().split(' '))))
+for x in sorted(a.difference(b).union(b.difference(a))):
+    print(x)
